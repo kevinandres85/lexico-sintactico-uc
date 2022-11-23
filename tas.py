@@ -1,13 +1,14 @@
 from distutils.log import error
 from conjuntos import (primeros, siguientes)
+from readGrammar import(d)
 
-gramatica = {
+""" gramatica = {
 	"E":[["T","E'"]],
     "E'":[["+", "T", "E'"], ["e"]],
     "T":[["F", "T'"]],
     "T'":[["*", "F", "T'"], ["e"]],
 	"F":[['(', 'E', ')'], ['i']]
-}
+} """
 
 """ primeros = {
     "E":["(", "i"],
@@ -24,6 +25,8 @@ gramatica = {
     "T'":["+", ")", "$"],
     "F" :["+", "*", "$"]
 } """
+
+gramatica = d
 
 producciones = {
     "E":["TE'"],
